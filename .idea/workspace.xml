@@ -7,13 +7,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68c22893-62f0-4b5b-b072-2bbf80d12787" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/numberTester.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources.py" afterDir="false" />
+    <list default="true" id="68c22893-62f0-4b5b-b072-2bbf80d12787" name="Changes" comment="Started work on a series of functions I intend to use to do a battery of tests on user-inputted numbers.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,6 +88,19 @@
       <option name="presentableId" value="Default" />
       <updated>1710255439476</updated>
     </task>
+    <task id="LOCAL-00001" summary="Started work on a series of functions I intend to use to do a battery of tests on user-inputted numbers.">
+      <option name="closed" value="true" />
+      <created>1710282260561</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1710282260561</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Started work on a series of functions I intend to use to do a battery of tests on user-inputted numbers." />
+    <option name="LAST_COMMIT_MESSAGE" value="Started work on a series of functions I intend to use to do a battery of tests on user-inputted numbers." />
   </component>
 </project>
