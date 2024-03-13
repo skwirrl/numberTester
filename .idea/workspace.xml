@@ -7,7 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68c22893-62f0-4b5b-b072-2bbf80d12787" name="Changes" comment="Started work on a series of functions I intend to use to do a battery of tests on user-inputted numbers.">
+    <list default="true" id="68c22893-62f0-4b5b-b072-2bbf80d12787" name="Changes" comment="Changed the divisors function to use the anonymous variable, changed square test to also test for cubes, and added the triangular and fibonacci tests.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources.py" beforeDir="false" afterPath="$PROJECT_DIR$/resources.py" afterDir="false" />
     </list>
@@ -26,6 +26,20 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;skwirrl&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="f1606a1b-3e44-4fd9-90fa-07a93797d81c" />
+        <option name="url" value="https://github.com/skwirrl/numberTester.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -38,16 +52,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.resources.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "run.code.analysis.last.selected.profile": "aDefault",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.file-colors"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.resources.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;aDefault&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.file-colors&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="resources" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="numberTester" />
@@ -96,11 +110,31 @@
       <option name="project" value="LOCAL" />
       <updated>1710282260561</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Changed the divisors function to use the anonymous variable, changed square test to also test for cubes, and added the triangular and fibonacci tests.">
+      <option name="closed" value="true" />
+      <created>1710287042766</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1710287042766</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Started work on a series of functions I intend to use to do a battery of tests on user-inputted numbers." />
-    <option name="LAST_COMMIT_MESSAGE" value="Started work on a series of functions I intend to use to do a battery of tests on user-inputted numbers." />
+    <MESSAGE value="Changed the divisors function to use the anonymous variable, changed square test to also test for cubes, and added the triangular and fibonacci tests." />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed the divisors function to use the anonymous variable, changed square test to also test for cubes, and added the triangular and fibonacci tests." />
   </component>
 </project>

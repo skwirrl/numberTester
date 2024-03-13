@@ -12,19 +12,23 @@ def divisors(test_number):
     return [_ for _ in range(1, test_number) if test_number % _ == 0]
 
 
+def digits(test_number):
+    return [int(ch) for ch in str(test_number).strip("-")]
+
+
 def even_odd_test(test_number):
     if test_number % 2 == 0:
-        return "Even"
+        return "is even"
     else:
-        return "Odd"
+        return "is odd"
 
 
 def neg_pos_test(test_number):
     string = str(test_number)
     if string[0] == "-":
-        return "Negative"
+        return "is negative"
     else:
-        return "Positive"
+        return "is positive"
 
 
 def prime_test(divisor_list):
@@ -57,11 +61,11 @@ def triangular_test(test_number):
     sum_check = 0
     for _ in range(test_number + 1):
         if test_number == sum_check:
-            return "Triangular"
+            return "is a triangular number"
         else:
             sum_check += next_add
             next_add += 1
-    return "Not Triangular"
+    return "not a triangular number"
 
 
 def fibonacci_test(test_number):
@@ -71,7 +75,34 @@ def fibonacci_test(test_number):
     binet_divisors2 = divisors(binet_number2)
     if (square_cube_test(binet_number1, binet_divisors1) == "Perfect Square" or
             square_cube_test(binet_number2, binet_divisors2) == "Perfect Square"):
-        return "a Fibonacci Number"
+        return "a Fibonacci number"
     else:
-        return "Not a Fibonacci Number"
+        return "not a Fibonacci number"
 
+
+def palindrome_test(digit_list):
+    reversed_list = digit_list[::-1]
+    if digit_list == reversed_list:
+        return "a palindromic number"
+    else:
+        return "not a palindromic number"
+
+
+def armstrong_test(test_number, digit_list):
+    exponent = len(digit_list)
+    armstrong_list = [i ** exponent for i in digit_list]
+    if sum(armstrong_list) == test_number:
+        return "an Armstrong number"
+    else:
+        return "not an Armstrong number"
+
+
+def automorphic_test(test_number, digit_list):
+    square = test_number ** 2
+    square_digit_list = digits(square)
+    while len(square_digit_list) > len(digit_list):
+        del square_digit_list[0]
+    if square_digit_list == digit_list:
+        return "an automorphic number"
+    else:
+        return "not an automorphic number"
