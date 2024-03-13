@@ -13,9 +13,10 @@ class TestNumber:
         self.is_perfect = self.perfect_test()
         self.is_abundant = self.abundant_test()
         self.is_deficient = self.deficient_test()
-        self.is_fibonacci =
-        self.is_palindrome =
-        self.is_automorphic =
+        self.is_fibonacci = self.fibonacci_test()
+        self.is_palindrome = self.palindrome_test()
+        self.is_armstrong_number = self.armstrong_test()
+        self.is_automorphic = self.automorphic_test()
 
 
 
@@ -39,6 +40,8 @@ class TestNumber:
             return False
 
     def pos_test(self):
+        if self.value == 0:
+            return False
         if not self.is_negative:
             return True
         else:
@@ -52,13 +55,13 @@ class TestNumber:
 
     def square_test(self):
         for divisor in self.divisors:
-            if divisor ** 2 == 0:
+            if divisor ** 2 == self.value:
                 return True
         return False
 
     def cube_test(self):
         for divisor in self.divisors:
-            if divisor ** 3 == 0:
+            if divisor ** 3 == self.value:
                 return True
         return False
 
@@ -79,4 +82,53 @@ class TestNumber:
             return True
         else:
             return False
+
+    def fibonacci_test(self):
+        binet_number1 = ((self.value ** 2) * 5) + 4
+        binet_number2 = ((self.value ** 2) * 5) - 4
+        binet_divisors1 = [i for i in range(1, binet_number1) if binet_number1 % i == 0]
+        binet_divisors2 = [i for i in range(1, binet_number2) if binet_number2 % i == 0]
+        for divisor in binet_divisors1:
+            if divisor ** 2 == binet_number1:
+                return True
+        for divisor in binet_divisors2:
+            if divisor ** 2 == binet_number2:
+                return True
+        return False
+
+    def palindrome_test(self):
+        flipped_list = self.digits[::-1]
+        if self.digits == flipped_list:
+            return True
+        else:
+            return False
+
+    def armstrong_test(self):
+        exponent = len(self.digits)
+        armstrong_list = [i ** exponent for i in self.digits]
+        if self.value == sum(armstrong_list):
+            return True
+        else:
+            return False
+
+    def automorphic_test(self):
+        square = self.value ** 2
+        square_divisors = [i for i in range(1, square) if square % i == 0]
+        while len(square_divisors) > len(self.divisors):
+            del square_divisors[0]
+        if self.divisors == square_divisors:
+            return True
+        else:
+            return False
+
+
+# testing
+
+for i in range(1000):
+    num = TestNumber(i)
+    for attribute, value in vars(num).items():
+        print(f'{attribute}: {value}')
+    print("=========================")
+
+
 
