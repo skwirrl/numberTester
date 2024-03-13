@@ -18,54 +18,47 @@ def digits(test_number):
 
 def even_odd_test(test_number):
     if test_number % 2 == 0:
-        return "is even"
+        return "even"
     else:
-        return "is odd"
+        return "odd"
 
 
 def neg_pos_test(test_number):
     string = str(test_number)
     if string[0] == "-":
-        return "is negative"
+        return "negative"
     else:
-        return "is positive"
+        return "positive"
 
 
 def prime_test(divisor_list):
     if len(divisor_list) == 1:
-        return "Prime"
+        return "prime"
     else:
-        return "Not Prime"
+        return "not prime"
 
 
-def square_cube_test(test_number, divisor_list):
+def square_test(test_number, divisor_list):
     for divisor in divisor_list:
         if divisor ** 2 == test_number:
-            return "Perfect Square"
+            return "a perfect square"
+    return "not a perfect square"
+
+
+def cube_test(test_number, divisor_list):
+    for divisor in divisor_list:
         if divisor ** 3 == test_number:
-            return "Perfect Cube"
-    return "Neither"
+            return "a perfect cube"
+    return "not a perfect cube"
 
 
-def perfect_deficient_abundant(test_number, divisor_list):
+def perfect_deficient_abundant_test(test_number, divisor_list):
     if sum(divisor_list) == test_number:
-        return "Perfect"
+        return "perfect"
     elif sum(divisor_list) > test_number:
-        return "Abundant"
+        return "abundant"
     else:
-        return "Deficient"
-
-
-def triangular_test(test_number):
-    next_add = 1
-    sum_check = 0
-    for _ in range(test_number + 1):
-        if test_number == sum_check:
-            return "is a triangular number"
-        else:
-            sum_check += next_add
-            next_add += 1
-    return "not a triangular number"
+        return "deficient"
 
 
 def fibonacci_test(test_number):
@@ -73,8 +66,8 @@ def fibonacci_test(test_number):
     binet_number2 = ((test_number ** 2) * 5) - 4
     binet_divisors1 = divisors(binet_number1)
     binet_divisors2 = divisors(binet_number2)
-    if (square_cube_test(binet_number1, binet_divisors1) == "Perfect Square" or
-            square_cube_test(binet_number2, binet_divisors2) == "Perfect Square"):
+    if (square_test(binet_number1, binet_divisors1) == "a perfect square" or
+            square_test(binet_number2, binet_divisors2) == "a perfect square"):
         return "a Fibonacci number"
     else:
         return "not a Fibonacci number"
@@ -106,3 +99,14 @@ def automorphic_test(test_number, digit_list):
         return "an automorphic number"
     else:
         return "not an automorphic number"
+
+
+number_tests = [even_odd_test, neg_pos_test, fibonacci_test]
+
+divisor_tests = [prime_test]
+
+digit_tests = [palindrome_test]
+
+number_divisor_tests = [square_test, cube_test, perfect_deficient_abundant_test]
+
+number_digit_tests = [armstrong_test, automorphic_test]
